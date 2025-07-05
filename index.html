@@ -327,23 +327,32 @@
     </div>
   </div>
   <div id="Gallery" class="tab-content">
-    <div>
-      <div class="gallery-heading" style="font-size:1.17em;">Conference Talks & Research Moments</div>
-      <div class="gallery-grid">
-        <img src="bjutseminar1.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-        <img src="bjutseminar2.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-        <img src="bjutseminar3.heic" alt="Collaboration Memorandum, BJUT" title="Beijing-China">
-      </div>
-      <div class="gallery-heading" style="font-size:1.17em; margin-top:30px;">Collaboration Visit – Keqiao International Park, Hangzhou-China</div>
-      <div class="gallery-grid">
-        <img src="keqiao1.jpg" alt="Keqiao International Park, Hangzhou - Photo 1" title="Keqiao International Park, Hangzhou">
-        <img src="keqiao2.jpg" alt="Keqiao International Park, Hangzhou - Photo 2" title="Keqiao International Park, Hangzhou">
-        <img src="keqiao3.jpg" alt="Keqiao International Park, Hangzhou - Photo 3" title="Keqiao International Park, Hangzhou">
-      </div>
-      <div style="font-size:0.97em; color:#888; margin-top:5px;">March 2025 &ndash; Research Collaboration & International Seminar</div>
-      <div style="margin-top:20px; font-size:0.98em; color:#555;">
-        Want your photos here? Upload <code>bjutseminar1.jpg</code>, <code>qingdaoconf1.jpg</code>, <code>keqiao1.jpg</code>, <code>keqiao2.jpg</code>, <code>keqiao3.jpg</code> to your repo and refresh!
-      </div>
+    <style>
+/* ...your previous styles... */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0 10px 0;
+}
+.gallery-grid img {
+  width: 185px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  border: 2px solid #eee;
+  background: #f9f9fa;
+}
+</style>
+
+<div class="gallery-heading" style="font-size:1.17em;">Conference Talks & Research Moments</div>
+<div class="gallery-grid">
+  <img src="bjutseminar1.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
+  <img src="bjutseminar2.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
+  <img src="bjutseminar3.heic" alt="Collaboration Memorandum, BJUT" title="Beijing-China">
+</div>
+
     </div>
   </div>
   <div id="Contact" class="tab-content">
