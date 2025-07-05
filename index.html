@@ -21,7 +21,7 @@
       align-items: center;
       justify-content: space-between;
       max-width: 950px;
-      margin: 30px auto 0 auto;
+      margin: 32px auto 0 auto;
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 6px 32px #0001;
@@ -57,26 +57,13 @@
       margin-right: 5px;
       display: block;
     }
-    /* Main tabs card */
-    .main-tabs-card {
-      max-width: 950px;
-      margin: 32px auto 0 auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px #0001;
-      overflow: hidden;
-    }
+    /* Tabs */
     .tabs {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #fff;
-      border-radius: 18px 18px 0 0;
-      border-bottom: 1.5px solid #e2e6ef;
-      margin: 0;
-      padding: 0;
+      margin: 28px 0 0 0;
       flex-wrap: wrap;
-      box-shadow: none;
     }
     .tablink {
       background: #f2f6fa;
@@ -97,26 +84,28 @@
     }
     .tab-content {
       display: none;
-      padding: 28px 32px 30px 32px;
+      max-width: 950px;
+      margin: 0 auto;
       background: #fff;
-      border-radius: 0 0 18px 18px;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 6px 32px #0001;
+      padding: 28px 32px 30px 32px;
       min-height: 120px;
-      margin: 0;
-      box-shadow: none;
-      max-width: 100%;
+      border-top: none;
     }
     .tab-content.active {
       display: block;
     }
     @media (max-width: 800px) {
-      .profile-container, .main-tabs-card {
-        max-width: 99vw;
-        border-radius: 0;
-        box-shadow: none;
-        padding-left: 0;
-        padding-right: 0;
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 2vw;
       }
-      .tab-content, .tabs {
+      .profile-photo {
+        margin: 18px auto 0 auto;
+      }
+      .tabs, .tab-content {
         padding-left: 3vw;
         padding-right: 3vw;
       }
@@ -131,44 +120,6 @@
     .cv-btn:hover { background: #215f93; }
     .pub-list li {margin-bottom: 8px;}
     .contact-row {margin-bottom:6px;}
-    <!-- Place this style in your <head> section! -->
-<style>
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  margin: 18px 0 10px 0;
-}
-.gallery-grid img {
-  width: 285px;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #0002;
-  border: 2px solid #eee;
-  background: #f9f9fa;
-}
-</style>
-
-<!-- ...inside your main-tabs-card, after the other tab-content blocks: -->
-<div id="Gallery" class="tab-content">
-  <div class="gallery-heading" style="font-size:1.17em;">Conference Talks & Research Moments</div>
-  <div class="gallery-grid">
-    <img src="bjutseminar1.JPG" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-    <img src="bjutseminar2.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-    <img src="bjutseminar3.jpg" alt="Collaboration Memorandum, BJUT" title="Beijing-China">
-  </div>
-</div>
-<div id="Contact" class="tab-content">
-  <div class="contact-row"><b>Email:</b> <a href="mailto:grasool@pmu.edu.sa">grasool@pmu.edu.sa</a></div>
-  <div class="contact-row"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">ghulam-rasool-30386b125</a></div>
-  <div class="contact-row"><b>Facebook:</b> <a href="https://www.facebook.com/iamdrrasool/" target="_blank">iamdrrasool</a></div>
-  <div class="contact-row"><b>Phone:</b> +966-13-849-9389</div>
-  <div class="contact-row"><b>Office:</b> G008, College of Engineering, PMU, Al-Khobar, Saudi Arabia</div>
-  <br>
-  <a href="mailto:grasool@pmu.edu.sa" class="cv-btn">Request Detailed CV or Queries</a>
-</div>
-
   </style>
 </head>
 <body>
@@ -196,37 +147,34 @@
     </div>
     <img src="profile.jpg" alt="Profile photo of Dr. Ghulam Rasool" class="profile-photo">
   </div>
-
-  <!-- Tabs and Content: ALL in one main-tabs-card frame -->
-  <div class="main-tabs-card">
-    <div class="tabs">
-      <button class="tablink active" onclick="openTab(event, 'About')">About</button>
-      <button class="tablink" onclick="openTab(event, 'Research')">Research Interests</button>
-      <button class="tablink" onclick="openTab(event, 'Experience')">Experience & Education</button>
-      <button class="tablink" onclick="openTab(event, 'Teaching')">Teaching</button>
-      <button class="tablink" onclick="openTab(event, 'Projects')">Projects</button>
-      <button class="tablink" onclick="openTab(event, 'Editorial')">Editorial Roles</button>
-      <button class="tablink" onclick="openTab(event, 'Awards')">Awards</button>
-      <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
-      <button class="tablink" onclick="openTab(event, 'Blog')">Blog</button>
-      <button class="tablink" onclick="openTab(event, 'Gallery')">Gallery</button>
-      <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
-    </div>
-    <div id="About" class="tab-content active">
-      <p>
-        I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
-        With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
-      </p>
-    </div>
-    <div id="Research" class="tab-content">
-      <ul>
-        <li>Fluid Mechanics & Computational Fluid Dynamics (CFD)</li>
-        <li>Energy Storage & Nano-Enhanced PCMs</li>
-        <li>Nanofluid Flows</li>
-        <li>Renewable Energy</li>
-        <li>Mathematical Physics & Materials Science</li>
-        <li>Thermal Systems & Mechanical Engineering</li>
-      </ul>
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab(event, 'About')">About</button>
+    <button class="tablink" onclick="openTab(event, 'Research')">Research Interests</button>
+    <button class="tablink" onclick="openTab(event, 'Experience')">Experience & Education</button>
+    <button class="tablink" onclick="openTab(event, 'Teaching')">Teaching</button>
+    <button class="tablink" onclick="openTab(event, 'Projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'Editorial')">Editorial Roles</button>
+    <button class="tablink" onclick="openTab(event, 'Awards')">Awards</button>
+    <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
+    <button class="tablink" onclick="openTab(event, 'Blog')">Blog</button>
+    <button class="tablink" onclick="openTab(event, 'Gallery')">Gallery</button>
+    <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
+  </div>
+  <div id="About" class="tab-content active">
+    <p>
+      I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
+      With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
+    </p>
+  </div>
+  <div id="Research" class="tab-content">
+    <ul>
+      <li>Fluid Mechanics & Computational Fluid Dynamics (CFD)</li>
+      <li>Energy Storage & Nano-Enhanced PCMs</li>
+      <li>Nanofluid Flows</li>
+      <li>Renewable Energy</li>
+      <li>Mathematical Physics & Materials Science</li>
+      <li>Thermal Systems & Mechanical Engineering</li>
+    </ul>
   </div>
   <div id="Experience" class="tab-content">
     <div style="display:flex;flex-wrap:wrap;gap:32px;">
@@ -378,24 +326,45 @@
       </div>
     </div>
   </div>
-<div id="Gallery" class="tab-content">
-  <div class="gallery-heading" style="font-size:1.17em;">Conference Talks & Research Moments</div>
-  <div class="gallery-grid">
-    <img src="bjutseminar1.JPG" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-    <img src="bjutseminar2.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
-    <img src="bjutseminar3.jpg" alt="Collaboration Memorandum, BJUT" title="Beijing-China">
+  <div id="Gallery" class="tab-content">
+    <style>
+/* ...your previous styles... */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0 10px 0;
+}
+.gallery-grid img {
+  width: 285px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  border: 2px solid #eee;
+  background: #f9f9fa;
+}
+</style>
+
+<div class="gallery-heading" style="font-size:1.17em;">Conference Talks & Research Moments</div>
+<div class="gallery-grid">
+  <img src="bjutseminar1.JPG" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
+  <img src="bjutseminar2.jpg" alt="Research Activities at Beijing University of Technology" title="Beijing University of Technology">
+  <img src="bjutseminar3.jpg" alt="Collaboration Memorandum, BJUT" title="Beijing-China">
+</div>
+
+    </div>
   </div>
-</div>
-<div id="Contact" class="tab-content">
-  <div class="contact-row"><b>Email:</b> <a href="mailto:grasool@pmu.edu.sa">grasool@pmu.edu.sa</a></div>
-  <div class="contact-row"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">ghulam-rasool-30386b125</a></div>
-  <div class="contact-row"><b>Facebook:</b> <a href="https://www.facebook.com/iamdrrasool/" target="_blank">iamdrrasool</a></div>
-  <div class="contact-row"><b>Phone:</b> +966-13-849-9389</div>
-  <div class="contact-row"><b>Office:</b> G008, College of Engineering, PMU, Al-Khobar, Saudi Arabia</div>
-  <br>
-  <a href="mailto:grasool@pmu.edu.sa" class="cv-btn">Request Detailed CV or Queries</a>
-</div>
-<footer>
+  <div id="Contact" class="tab-content">
+    <div class="contact-row"><b>Email:</b> <a href="mailto:grasool@pmu.edu.sa">grasool@pmu.edu.sa</a></div>
+    <div class="contact-row"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">ghulam-rasool-30386b125</a></div>
+    <div class="contact-row"><b>Facebook:</b> <a href="https://www.facebook.com/iamdrrasool/" target="_blank">iamdrrasool</a></div>
+    <div class="contact-row"><b>Phone:</b> +966-13-849-9389</div>
+    <div class="contact-row"><b>Office:</b> G008, College of Engineering, PMU, Al-Khobar, Saudi Arabia</div>
+    <br>
+    <a href="mailto:grasool@pmu.edu.sa" class="cv-btn">Request Detailed CV or Queries</a>
+  </div>
+  <footer>
     &copy; 2025 Dr. Ghulam Rasool. All rights reserved.
   </footer>
   <script>
