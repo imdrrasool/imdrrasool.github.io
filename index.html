@@ -17,16 +17,24 @@
       text-align: center;
     }
     .profile-container,
-.main-tabs-card {
-  max-width: 950px;
-  margin: 30px auto 0 auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 6px 30px #0001;
-  }
+    .main-tabs-card {
+      max-width: 950px;
+      margin: 30px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 30px #0001;
+    }
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 32px 16px 32px;
+      flex-wrap: nowrap; /* This keeps photo to the right */
+    }
     .profile-info {
       flex: 1 1 350px;
-      min-width: 220px;
+      min-width: 0;
+      max-width: 65%; /* So it doesn't push the photo off */
       text-align: left;
     }
     .profile-info h1 {
@@ -52,6 +60,11 @@
       margin-left: 30px;
       margin-right: 5px;
       display: block;
+      flex-shrink: 0; /* Never let the image shrink */
+    }
+    .main-tabs-card {
+      margin: 30px auto 0 auto;
+      padding: 0;
     }
     .tabs {
       display: flex;
@@ -64,8 +77,14 @@
       padding: 0;
       flex-wrap: wrap;
       box-shadow: none;
+      overflow-x: auto;
+      white-space: nowrap;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
+    .tabs::-webkit-scrollbar { display: none; }
     .tablink {
+      flex: 0 0 auto;
       background: #f2f6fa;
       border: none;
       outline: none;
@@ -129,11 +148,20 @@
         padding-left: 0;
         padding-right: 0;
       }
+      .profile-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 16px 2vw;
+      }
+      .profile-photo {
+        margin: 18px auto 0 auto;
+      }
+      .profile-info {text-align: center;}
       .tab-content, .tabs {
         padding-left: 3vw;
         padding-right: 3vw;
       }
-      .profile-info {text-align: center;}
     }
     .cv-btn {
       display: inline-block; margin: 14px 0; padding: 10px 22px;
