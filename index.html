@@ -57,39 +57,26 @@
       margin-right: 5px;
       display: block;
     }
-    /* Main Tabs Card */
-    .main-tabs-card {
-      max-width: 950px;
-      margin: 32px auto 0 auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px #0001;
-      overflow: hidden;
-    }
+    /* Tabs */
     .tabs {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #fff;
-      border-radius: 18px 18px 0 0;
-      border-bottom: 1.5px solid #e2e6ef;
-      margin: 0;
-      padding: 0;
+      margin: 28px 0 0 0;
       flex-wrap: wrap;
-      box-shadow: none;
     }
     .tablink {
-      background: none;
+      background: #f2f6fa;
       border: none;
       outline: none;
       cursor: pointer;
       padding: 13px 32px;
+      margin-right: 4px;
       font-size: 1.1em;
-      border-radius: 18px 18px 0 0;
+      border-radius: 11px 11px 0 0;
       color: #153452;
       font-weight: 600;
       transition: background 0.23s, color 0.21s;
-      margin-bottom: -2px;
     }
     .tablink.active, .tablink:hover {
       background: #153452;
@@ -97,41 +84,28 @@
     }
     .tab-content {
       display: none;
-      padding: 28px 32px 30px 32px;
+      max-width: 950px;
+      margin: 0 auto;
       background: #fff;
-      border-radius: 0 0 18px 18px;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 6px 32px #0001;
+      padding: 28px 32px 30px 32px;
       min-height: 120px;
-      margin: 0;
-      box-shadow: none;
+      border-top: none;
     }
     .tab-content.active {
       display: block;
     }
-    /* Gallery grid for inside tab-content */
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 18px 0 10px 0;
-    }
-    .gallery-grid img {
-      width: 185px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #0002;
-      border: 2px solid #eee;
-      background: #f9f9fa;
-    }
     @media (max-width: 800px) {
-      .profile-container, .main-tabs-card {
-        max-width: 99vw;
-        border-radius: 0;
-        box-shadow: none;
-        padding-left: 0;
-        padding-right: 0;
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 2vw;
       }
-      .tab-content, .tabs {
+      .profile-photo {
+        margin: 18px auto 0 auto;
+      }
+      .tabs, .tab-content {
         padding-left: 3vw;
         padding-right: 3vw;
       }
@@ -158,14 +132,14 @@
       <div class="affil">Assistant Professor, Mechanical Engineering</div>
       <div>Prince Mohammad Bin Fahd University, Saudi Arabia</div>
       <div class="major-info" style="margin-top:15px;">
-        Researcher in <b>fluid mechanics, computational fluid dynamics, nanofluids, and renewable energy</b>.<br>
+        Researcher in <b>fluid mechanics, computational fluid dynamics, nanofluids, and renewable energy</b>. <br>
         Advancing sustainable energy and materials for a better world.
       </div>
       <div class="profile-links" style="margin-top:16px;">
         <a href="mailto:grasool@pmu.edu.sa">Email</a>
         <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">LinkedIn</a>
         <a href="https://faculty.pmu.edu.sa/PMUFaculties/Details/grasool" target="_blank">Faculty Profile</a>
-        <a href="https://www.researchgate.net/profile/Ghulam-Rasool-11?ev=hdr_xprf" target="_blank">ResearchGate</a>
+        <a href="https://www.researchgate.net/profile/Ghulam-Rasool-11?ev=hdr_xprf" target="_blank">ResearchGate</a> 
         <a href="https://scholar.google.com/citations?user=Hvw26kMAAAAJ&hl=en" target="_blank">Google Scholar</a>
         <a href="https://www.youtube.com/@ProfessorSpeaksLogic" target="_blank">YouTube Channel</a>
         <a href="https://orcid.org/0000-0002-5880-9553" target="_blank">ORCID</a>
@@ -173,26 +147,25 @@
     </div>
     <img src="profile.jpg" alt="Profile photo of Dr. Ghulam Rasool" class="profile-photo">
   </div>
-  <div class="main-tabs-card">
-    <div class="tabs">
-      <button class="tablink active" onclick="openTab(event, 'About')">About</button>
-      <button class="tablink" onclick="openTab(event, 'Research')">Research Interests</button>
-      <button class="tablink" onclick="openTab(event, 'Experience')">Experience & Education</button>
-      <button class="tablink" onclick="openTab(event, 'Teaching')">Teaching</button>
-      <button class="tablink" onclick="openTab(event, 'Projects')">Projects</button>
-      <button class="tablink" onclick="openTab(event, 'Editorial')">Editorial Roles</button>
-      <button class="tablink" onclick="openTab(event, 'Awards')">Awards</button>
-      <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
-      <button class="tablink" onclick="openTab(event, 'Blog')">Blog</button>
-      <button class="tablink" onclick="openTab(event, 'Gallery')">Gallery</button>
-      <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
-    </div>
-    <div id="About" class="tab-content active">
-      <p>
-        I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
-        With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
-      </p>
-    </div>
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab(event, 'About')">About</button>
+    <button class="tablink" onclick="openTab(event, 'Research')">Research Interests</button>
+    <button class="tablink" onclick="openTab(event, 'Experience')">Experience & Education</button>
+    <button class="tablink" onclick="openTab(event, 'Teaching')">Teaching</button>
+    <button class="tablink" onclick="openTab(event, 'Projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'Editorial')">Editorial Roles</button>
+    <button class="tablink" onclick="openTab(event, 'Awards')">Awards</button>
+    <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
+    <button class="tablink" onclick="openTab(event, 'Blog')">Blog</button>
+    <button class="tablink" onclick="openTab(event, 'Gallery')">Gallery</button>
+    <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
+  </div>
+  <div id="About" class="tab-content active">
+    <p>
+      I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
+      With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
+    </p>
+  </div>
   <div id="Research" class="tab-content">
     <ul>
       <li>Fluid Mechanics & Computational Fluid Dynamics (CFD)</li>
