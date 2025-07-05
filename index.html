@@ -17,203 +17,253 @@
       padding: 24px 0;
       text-align: center;
     }
-    .container {
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       max-width: 950px;
-      margin: 32px auto 0 auto;
+      margin: 30px auto 0 auto;
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 6px 32px #0001;
-      padding: 36px 32px 28px 32px;
+      padding: 28px 32px 16px 32px;
+      flex-wrap: wrap;
     }
-    h1 { margin-top: 0; font-size: 2.4em; }
-    a { color: #0067b8; text-decoration: none;}
-    a:hover { text-decoration: underline;}
-    .profile-links a { margin-right: 16px;}
+    .profile-info {
+      flex: 1 1 350px;
+      min-width: 220px;
+      text-align: left;
+    }
+    .profile-info h1 {
+      margin: 0 0 7px 0;
+      font-size: 2em;
+      color: #153452;
+    }
+    .profile-info .affil {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .profile-info .major-info {
+      margin: 13px 0;
+    }
+    .profile-links a { margin-right: 12px; font-size:1.04em;}
+    .profile-photo {
+      width: 135px;
+      height: 135px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 12px #0002;
+      object-fit: cover;
+      margin-left: 30px;
+      margin-right: 5px;
+      display: block;
+    }
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 28px 0 0 0;
+      flex-wrap: wrap;
+    }
+    .tablink {
+      background: #f2f6fa;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 13px 32px;
+      margin-right: 4px;
+      font-size: 1.1em;
+      border-radius: 11px 11px 0 0;
+      color: #153452;
+      font-weight: 600;
+      transition: background 0.23s, color 0.21s;
+    }
+    .tablink.active, .tablink:hover {
+      background: #153452;
+      color: #fff;
+    }
+    .tab-content {
+      display: none;
+      max-width: 950px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 6px 32px #0001;
+      padding: 28px 32px 30px 32px;
+      min-height: 120px;
+      border-top: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @media (max-width: 800px) {
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 2vw;
+      }
+      .profile-photo {
+        margin: 18px auto 0 auto;
+      }
+      .tabs, .tab-content {
+        padding-left: 3vw;
+        padding-right: 3vw;
+      }
+      .profile-info {text-align: center;}
+    }
     .cv-btn {
-      display: inline-block; margin: 12px 0; padding: 10px 22px;
+      display: inline-block; margin: 14px 0; padding: 10px 22px;
       background: #153452; color: #fff; border-radius: 24px;
       font-weight: 500; letter-spacing: .5px; text-decoration: none;
       box-shadow: 0 2px 6px #0002; transition: background 0.22s;
     }
     .cv-btn:hover { background: #215f93; }
-    @media (max-width: 600px) {
-      .container { padding: 14px 5vw; }
-      h1 { font-size: 1.44em;}
-    }
-    .pub-list li {margin-bottom: 9px;}
-    .two-col {
-      display: flex; flex-wrap: wrap; gap: 32px;
-    }
-    .two-col > div { flex: 1 1 290px;}
-    .profile-photo {
-      width:130px;height:130px;border-radius:50%;border:4px solid #fff;box-shadow:0 2px 12px #0002;margin:18px auto 10px auto;display:block;
-    }
-    /* Accordion Styles */
-    .accordion-title {
-      width: 100%; text-align: left; padding: 16px; font-size: 1.13em;
-      background: #f2f6fa; border: none; border-bottom: 1px solid #eee;
-      cursor: pointer; outline: none; border-radius: 0; font-weight: bold;
-      transition: background 0.22s;
-    }
-    .accordion-title:hover { background: #e2e8f0; }
-    .accordion-content {
-      padding: 18px 22px; background: #fff; display: none; border-bottom: 1px solid #f1f1f1;
-    }
-    .accordion-section:last-child .accordion-content { border-bottom: none; }
-    .contact-row { margin-bottom: 5px;}
+    .pub-list li {margin-bottom: 8px;}
+    .contact-row {margin-bottom:6px;}
   </style>
 </head>
 <body>
   <header>
-    <h1>Prof. Dr. Ghulam Rasool</h1>
-    <img src="profile.jpg" alt="Profile photo of Dr. Ghulam Rasool" class="profile-photo">
-    <div>Assistant Professor, Mechanical Engineering<br>
-      Prince Mohammad Bin Fahd University, Saudi Arabia
-    </div>
-    <div class="profile-links" style="margin-top:10px;">
-      <a href="mailto:grasool@pmu.edu.sa">Email</a>
-      <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">LinkedIn</a>
-      <a href="https://faculty.pmu.edu.sa/PMUFaculties/Details/grasool" target="_blank">Faculty Profile</a>
-      <a href="https://www.researchgate.net/profile/Ghulam-Rasool-11?ev=hdr_xprf" target="_blank">ResearchGate</a> 
-      <a href="https://scholar.google.com/citations?user=Hvw26kMAAAAJ&hl=en" target="_blank">Google Scholar</a> 
-      <a href="https://orcid.org/0000-0002-5880-9553" target="_blank">ORCID</a> 
-    </div>
+    <div>Prof. Dr. Ghulam Rasool – Academic Profile</div>
   </header>
-  <div class="container">
-    <div class="accordion">
-      <div class="accordion-section">
-        <button class="accordion-title">About Me</button>
-        <div class="accordion-content">
-          <p>
-            I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
-            With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
-          </p>
-        </div>
+  <div class="profile-container">
+    <div class="profile-info">
+      <h1>Prof. Dr. Ghulam Rasool</h1>
+      <div class="affil">Assistant Professor, Mechanical Engineering</div>
+      <div>Prince Mohammad Bin Fahd University, Saudi Arabia</div>
+      <div class="major-info" style="margin-top:15px;">
+        Researcher in <b>fluid mechanics, computational fluid dynamics, nanofluids, and renewable energy</b>. <br>
+        Advancing sustainable energy and materials for a better world.
       </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Research Interests</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Fluid Mechanics & Computational Fluid Dynamics (CFD)</li>
-            <li>Energy Storage & Nano-Enhanced PCMs</li>
-            <li>Nanofluid Flows</li>
-            <li>Renewable Energy</li>
-            <li>Mathematical Physics & Materials Science</li>
-            <li>Thermal Systems & Mechanical Engineering</li>
-          </ul>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Professional Experience & Education</button>
-        <div class="accordion-content">
-          <div class="two-col">
-            <div>
-              <b>Professional Experience:</b>
-              <ul>
-                <li><b>Assistant Professor</b>, PMU, Saudi Arabia (2024–Present)</li>
-                <li><b>Editor</b>, MED Newsletter, PMU (2025–Present)</li>
-                <li><b>Advisory Foreign Expert</b>, Innovation Center, Zhejiang, China (2024–Present)</li>
-                <li><b>Senior Researcher</b>, Beijing Univ. of Tech., China (2022–2024)</li>
-                <li><b>Visiting Lecturer</b>, Dublin College @ BJUT, China (2024)</li>
-                <li><b>Postdoc Fellow</b>, Lebanese American Univ., Lebanon (2023–2024)</li>
-                <li><b>Assistant Professor</b>, Wuxi University, China (2020–2022)</li>
-                <li><b>Visiting Lecturer & Admin</b>, Quaid-i-Azam Univ., Pakistan (2006–2017)</li>
-              </ul>
-            </div>
-            <div>
-              <b>Education:</b>
-              <ul>
-                <li><b>Ph.D. Applied Mathematics</b>, Zhejiang University, China</li>
-                <li><b>M.S. Computational Mathematics</b>, COMSATS University, Pakistan</li>
-                <li><b>M.Sc. Applied Mathematics</b>, Quaid-i-Azam University, Pakistan</li>
-                <li><b>B.Sc.</b>, University of the Punjab, Pakistan</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Major Research Projects</button>
-        <div class="accordion-content">
-          <ul>
-            <li><b>PI, High Talent International Researchers Fund:</b> Nanofluids & Entropy Optimization (2022–2024)</li>
-            <li><b>PI, Beijing Postdoc Fund:</b> Nano-Enhanced Latent Heat Storage (2023–2024)</li>
-            <li><b>PI, Beijing Natural Science Foundation:</b> Battery Thermal Management with Nano-PCM (2023–2024)</li>
-            <li><b>Foreign Expert, China MoST:</b> Nano-Enhanced Latent Heat Storage Systems (2023–2024)</li>
-            <li><b>Foreign Collaborator, Univ. of Tabuk:</b> Smart Grid Sizing for EV Charging (2023–2025, Ongoing)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Academic Services & Editorial Roles</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Editorial Board: <b>International Journal of Fluid Engineering (AIP)</b></li>
-            <li>Academic Editor: <b>Heliyon (Elsevier), PLOS One, AMS&E, AMP</b> (Hindawi)</li>
-            <li>Panel Member: MDPI</li>
-            <li>Peer Reviewer: 500+ international journals</li>
-          </ul>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Awards & Honors</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Excellent Speaker, ICCPA 2024</li>
-            <li>Wuxi Friendship Ambassador (2020–2022)</li>
-            <li>Top Cited Article, IOP Publisher (2018–2021)</li>
-            <li>Doctoral Scholarships, Zhejiang University (2017–2020)</li>
-            <li>Excellent Employee, Quaid-i-Azam University (2009–2011)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Selected Publications</button>
-        <div class="accordion-content">
-          <ul class="pub-list">
-            <li>Rasool, G. et al., "Recent theoretical approaches to MHD radiative heat transfer in chemically reactive Powell-Eyring nanofluid flow through porous media." <i>IntechOpen</i>, 2025.</li>
-            <li>Rehman, A., Ashraf, M., Rasool, G., et al., "Impact of nonlinear motion on convective heat transfer induced by oscillating thermal waves," <i>Modern Physics Letters B</i>, 2025.</li>
-            <li>Sun, T., Wang, X., Rasool, G., et al., "A novel thermal-cloak-based design for preventing thermal runaway in lithium-ion battery packs," <i>Journal of Energy Storage</i>, 2025.</li>
-            <li>Kausar, F., Ali, A. B., Ashraf, M., Rasool, G., et al., "Computational analysis of heat and mass transfer dynamics on vertical surfaces," <i>Thermal Advances</i>, 2025.</li>
-            <li>Rasool, G., Xinhua, W., Sun, T., et al., "Recent advancements in battery thermal management system (BTMS): A review," <i>Heliyon</i>, 2024.</li>
-          </ul>
-          <a href="https://scholar.google.com/citations?user=Hvw26kMAAAAJ&hl=en" class="cv-btn" style="margin-top:8px;">Full Publications List</a>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Contact</button>
-        <div class="accordion-content">
-          <div class="contact-row"><b>Email:</b> <a href="mailto:grasool@pmu.edu.sa">grasool@pmu.edu.sa</a></div>
-          <div class="contact-row"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">ghulam-rasool-30386b125</a></div>
-          <div class="contact-row"><b>Facebook:</b> <a href="https://www.facebook.com/iamdrrasool/" target="_blank">iamdrrasool</a></div>
-          <div class="contact-row"><b>Phone:</b> ++966-13-849-9389</div>
-          <div class="contact-row"><b>Office:</b> G008, College of Engineering, PMU, Al-Khobar, Saudi Arabia</div>
-        </div>
-      </div>
-      <div class="accordion-section">
-        <button class="accordion-title">Detailed CV or Queries</button>
-        <div class="accordion-content">
-          <a href="mailto:grasool@pmu.edu.sa" class="cv-btn" download>Detailed CV or any other queries</a>
-        </div>
+      <div class="profile-links" style="margin-top:16px;">
+        <a href="mailto:grasool@pmu.edu.sa">Email</a>
+        <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">LinkedIn</a>
+        <a href="https://faculty.pmu.edu.sa/PMUFaculties/Details/grasool" target="_blank">Faculty Profile</a>
+        <a href="https://www.researchgate.net/profile/Ghulam-Rasool-11?ev=hdr_xprf" target="_blank">ResearchGate</a> 
+        <a href="https://scholar.google.com/citations?user=Hvw26kMAAAAJ&hl=en" target="_blank">Google Scholar</a> 
+        <a href="https://orcid.org/0000-0002-5880-9553" target="_blank">ORCID</a>
       </div>
     </div>
+    <img src="profile.jpg" alt="Profile photo of Dr. Ghulam Rasool" class="profile-photo">
+  </div>
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab(event, 'About')">About</button>
+    <button class="tablink" onclick="openTab(event, 'Research')">Research Interests</button>
+    <button class="tablink" onclick="openTab(event, 'Experience')">Experience & Education</button>
+    <button class="tablink" onclick="openTab(event, 'Projects')">Projects</button>
+    <button class="tablink" onclick="openTab(event, 'Editorial')">Editorial Roles</button>
+    <button class="tablink" onclick="openTab(event, 'Awards')">Awards</button>
+    <button class="tablink" onclick="openTab(event, 'Publications')">Publications</button>
+    <button class="tablink" onclick="openTab(event, 'Contact')">Contact</button>
+  </div>
+  <div id="About" class="tab-content active">
+    <p>
+      I am a researcher and educator specializing in <b>fluid mechanics, computational fluid dynamics, energy storage, nanofluids, and renewable energy</b>. My work integrates mathematical physics, materials science, and advanced numerical simulations to address real-world challenges in energy sustainability, with a focus on net-zero goals and Saudi Vision 2030.<br><br>
+      With international experience across Saudi Arabia, China, Lebanon, and Pakistan, I have led research on nano-enhanced phase change materials, battery thermal management, and AI-powered grid integration. I also serve on editorial boards of leading scientific journals, and am passionate about mentorship, research collaboration, and science outreach.
+    </p>
+  </div>
+  <div id="Research" class="tab-content">
+    <ul>
+      <li>Fluid Mechanics & Computational Fluid Dynamics (CFD)</li>
+      <li>Energy Storage & Nano-Enhanced PCMs</li>
+      <li>Nanofluid Flows</li>
+      <li>Renewable Energy</li>
+      <li>Mathematical Physics & Materials Science</li>
+      <li>Thermal Systems & Mechanical Engineering</li>
+    </ul>
+  </div>
+  <div id="Experience" class="tab-content">
+    <div style="display:flex;flex-wrap:wrap;gap:32px;">
+      <div style="flex:1 1 290px;min-width:210px;">
+        <b>Professional Experience:</b>
+        <ul>
+          <li><b>Assistant Professor</b>, PMU, Saudi Arabia (2024–Present)</li>
+          <li><b>Editor</b>, MED Newsletter, PMU (2025–Present)</li>
+          <li><b>Advisory Foreign Expert</b>, Innovation Center, Zhejiang, China (2024–Present)</li>
+          <li><b>Senior Researcher</b>, Beijing Univ. of Tech., China (2022–2024)</li>
+          <li><b>Visiting Lecturer</b>, Dublin College @ BJUT, China (2024)</li>
+          <li><b>Postdoc Fellow</b>, Lebanese American Univ., Lebanon (2023–2024)</li>
+          <li><b>Assistant Professor</b>, Wuxi University, China (2020–2022)</li>
+          <li><b>Visiting Lecturer & Admin</b>, Quaid-i-Azam Univ., Pakistan (2006–2017)</li>
+        </ul>
+      </div>
+      <div style="flex:1 1 290px;min-width:210px;">
+        <b>Education:</b>
+        <ul>
+          <li><b>Ph.D. Applied Mathematics</b>, Zhejiang University, China</li>
+          <li><b>M.S. Computational Mathematics</b>, COMSATS University, Pakistan</li>
+          <li><b>M.Sc. Applied Mathematics</b>, Quaid-i-Azam University, Pakistan</li>
+          <li><b>B.Sc.</b>, University of the Punjab, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="Projects" class="tab-content">
+    <ul>
+      <li><b>PI, High Talent International Researchers Fund:</b> Nanofluids & Entropy Optimization (2022–2024)</li>
+      <li><b>PI, Beijing Postdoc Fund:</b> Nano-Enhanced Latent Heat Storage (2023–2024)</li>
+      <li><b>PI, Beijing Natural Science Foundation:</b> Battery Thermal Management with Nano-PCM (2023–2024)</li>
+      <li><b>Foreign Expert, China MoST:</b> Nano-Enhanced Latent Heat Storage Systems (2023–2024)</li>
+      <li><b>Foreign Collaborator, Univ. of Tabuk:</b> Smart Grid Sizing for EV Charging (2023–2025, Ongoing)</li>
+    </ul>
+  </div>
+  <div id="Editorial" class="tab-content">
+    <ul>
+      <li>Editorial Board: <b>International Journal of Fluid Engineering (AIP)</b></li>
+      <li>Academic Editor: <b>Heliyon (Elsevier), PLOS One, AMS&E, AMP</b> (Hindawi)</li>
+      <li>Panel Member: MDPI</li>
+      <li>Peer Reviewer: 500+ international journals</li>
+    </ul>
+  </div>
+  <div id="Awards" class="tab-content">
+    <ul>
+      <li>Excellent Speaker, ICCPA 2024</li>
+      <li>Wuxi Friendship Ambassador (2020–2022)</li>
+      <li>Top Cited Article, IOP Publisher (2018–2021)</li>
+      <li>Doctoral Scholarships, Zhejiang University (2017–2020)</li>
+      <li>Excellent Employee, Quaid-i-Azam University (2009–2011)</li>
+    </ul>
+  </div>
+  <div id="Publications" class="tab-content">
+    <ul class="pub-list">
+      <li>Rasool, G. et al., "Recent theoretical approaches to MHD radiative heat transfer in chemically reactive Powell-Eyring nanofluid flow through porous media." <i>IntechOpen</i>, 2025.</li>
+      <li>Rehman, A., Ashraf, M., Rasool, G., et al., "Impact of nonlinear motion on convective heat transfer induced by oscillating thermal waves," <i>Modern Physics Letters B</i>, 2025.</li>
+      <li>Sun, T., Wang, X., Rasool, G., et al., "A novel thermal-cloak-based design for preventing thermal runaway in lithium-ion battery packs," <i>Journal of Energy Storage</i>, 2025.</li>
+      <li>Kausar, F., Ali, A. B., Ashraf, M., Rasool, G., et al., "Computational analysis of heat and mass transfer dynamics on vertical surfaces," <i>Thermal Advances</i>, 2025.</li>
+      <li>Rasool, G., Xinhua, W., Sun, T., et al., "Recent advancements in battery thermal management system (BTMS): A review," <i>Heliyon</i>, 2024.</li>
+    </ul>
+    <a href="https://scholar.google.com/citations?user=Hvw26kMAAAAJ&hl=en" class="cv-btn" style="margin-top:8px;">Full Publications List</a>
+  </div>
+  <div id="Contact" class="tab-content">
+    <div class="contact-row"><b>Email:</b> <a href="mailto:grasool@pmu.edu.sa">grasool@pmu.edu.sa</a></div>
+    <div class="contact-row"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ghulam-rasool-30386b125/" target="_blank">ghulam-rasool-30386b125</a></div>
+    <div class="contact-row"><b>Facebook:</b> <a href="https://www.facebook.com/iamdrrasool/" target="_blank">iamdrrasool</a></div>
+    <div class="contact-row"><b>Phone:</b> ++966-13-849-9389</div>
+    <div class="contact-row"><b>Office:</b> G008, College of Engineering, PMU, Al-Khobar, Saudi Arabia</div>
+    <br>
+    <a href="mailto:grasool@pmu.edu.sa" class="cv-btn" download>Request Detailed CV or Queries</a>
   </div>
   <footer>
     &copy; 2025 Dr. Ghulam Rasool. All rights reserved.
   </footer>
   <script>
-    const titles = document.querySelectorAll('.accordion-title');
-    titles.forEach(title => {
-      title.addEventListener('click', function() {
-        const contents = document.querySelectorAll('.accordion-content');
-        contents.forEach(c => { if (c !== this.nextElementSibling) c.style.display = 'none'; });
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-    // Hide all except first section on load
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).className += " active";
+      evt.currentTarget.className += " active";
+    }
+    // Activate first tab on load
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.accordion-content').forEach((c, i) => c.style.display = i === 0 ? 'block' : 'none');
+      document.querySelector(".tablink").click();
     });
   </script>
 </body>
