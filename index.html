@@ -6,185 +6,177 @@
   <title>Prof. Dr. Ghulam Rasool – Academic Profile</title>
   <meta name="description" content="Dr. Ghulam Rasool – Assistant Professor, Mechanical Engineering, Prince Mohammad Bin Fahd University, Saudi Arabia. Researcher in fluid mechanics, CFD, nanofluids, energy storage.">
   <style>
-    body {
+body {
   background: linear-gradient(135deg, #1a2333 0%, #243b55 100%);
   color: #e6f1ff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
 }
 header, footer {
   background: #102040;
   color: #fff;
+  padding: 24px 0;
+  text-align: center;
 }
 .profile-container,
 .main-tabs-card {
-  background: rgba(25, 36, 59, 0.96);
-  box-shadow: 0 6px 30px rgba(30,40,60,0.08);
+  max-width: 950px;
+  margin: 30px auto 0 auto;
+  background: rgba(25, 36, 59, 0.96); /* darker, semi-transparent */
+  border-radius: 18px;
+  box-shadow: 0 6px 30px #0003;
 }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0; background: #f9f9fa; color: #232323;
-    }
-    header, footer {
-      background: #153452;
-      color: #fff;
-      padding: 24px 0;
-      text-align: center;
-    }
-    .profile-container,
-    .main-tabs-card {
-      max-width: 950px;
-      margin: 30px auto 0 auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 6px 30px #0001;
-    }
-    .profile-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 28px 32px 16px 32px;
-      flex-wrap: nowrap; /* This keeps photo to the right */
-    }
-    .profile-info {
-      flex: 1 1 350px;
-      min-width: 0;
-      max-width: 80%; /* So it doesn't push the photo off */
-      text-align: left;
-    }
-    .profile-info h1 {
-      margin: 0 0 7px 0;
-      font-size: 2em;
-      color: #153452;
-    }
-    .profile-info .affil {
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .profile-info .major-info {
-      margin: 13px 0;
-    }
-    .profile-links a { margin-right: 12px; font-size:1.04em;}
-    .profile-photo {
-      width: 135px;
-      height: 135px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      box-shadow: 0 2px 12px #0002;
-      object-fit: cover;
-      margin-left: 30px;
-      margin-right: 5px;
-      display: block;
-      flex-shrink: 0; /* Never let the image shrink */
-    }
-    .main-tabs-card {
-      margin: 30px auto 0 auto;
-      padding: 0;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      border-radius: 18px 18px 0 0;
-      border-bottom: 1.5px solid #e2e6ef;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
-      box-shadow: none;
-      overflow-x: auto;
-      white-space: nowrap;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .tabs::-webkit-scrollbar { display: none; }
-    .tablink {
-      flex: 0 0 auto;
-      background: #f2f6fa;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 13px 32px;
-      margin-right: 4px;
-      font-size: 1.1em;
-      border-radius: 11px 11px 0 0;
-      color: #153452;
-      font-weight: 600;
-      transition: background 0.23s, color 0.21s;
-    }
-    .tablink.active, .tablink:hover {
-      background: #153452;
-      color: #fff;
-    }
-    .tab-content {
-      display: none;
-      padding: 28px 32px 30px 32px;
-      background: #fff;
-      border-radius: 0 0 18px 18px;
-      min-height: 120px;
-      margin: 0;
-      box-shadow: none;
-      max-width: 100%;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .section-heading {
-      font-size: 1.17em;
-      font-weight: 600;
-      color: #215f93;
-      background: #e6f0fa;
-      padding: 11px 18px;
-      border-radius: 8px;
-      margin: 0 0 18px 0;
-      box-shadow: 0 1px 4px #0001;
-      letter-spacing: 0.2px;
-    }
-    .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 18px 0 10px 0;
-    }
-    .gallery-grid img {
-      width: 275px;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px #0002;
-      border: 2px solid #eee;
-      background: #f9f9fa;
-    }
-    @media (max-width: 800px) {
-      .profile-container, .main-tabs-card {
-        max-width: 99vw;
-        border-radius: 0;
-        box-shadow: none;
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .profile-container {
-        flex-direction: column;
-        flex-wrap: wrap;
-        text-align: center;
-        padding: 16px 2vw;
-      }
-      .profile-photo {
-        margin: 18px auto 0 auto;
-      }
-      .profile-info {text-align: center;}
-      .tab-content, .tabs {
-        padding-left: 3vw;
-        padding-right: 3vw;
-      }
-    }
-    .cv-btn {
-      display: inline-block; margin: 14px 0; padding: 10px 22px;
-      background: #153452; color: #fff; border-radius: 24px;
-      font-weight: 500; letter-spacing: .5px; text-decoration: none;
-      box-shadow: 0 2px 6px #0002; transition: background 0.22s;
-    }
-    .cv-btn:hover { background: #215f93; }
-    .pub-list li {margin-bottom: 8px;}
-    .contact-row {margin-bottom:6px;}
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px 16px 32px;
+  flex-wrap: nowrap;
+}
+.profile-info {
+  flex: 1 1 350px;
+  min-width: 0;
+  max-width: 80%;
+  text-align: left;
+}
+.profile-info h1 {
+  margin: 0 0 7px 0;
+  font-size: 2em;
+  color: #90caf9;
+}
+.profile-info .affil {
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #b0bec5;
+}
+.profile-info .major-info {
+  margin: 13px 0;
+}
+.profile-links a { margin-right: 12px; font-size:1.04em; color: #4dd0e1;}
+.profile-links a:hover { color: #fff; }
+.profile-photo {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 12px #0002;
+  object-fit: cover;
+  margin-left: 30px;
+  margin-right: 5px;
+  display: block;
+  flex-shrink: 0;
+}
+.main-tabs-card {
+  margin: 30px auto 0 auto;
+  padding: 0;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(25, 36, 59, 0.95);
+  border-radius: 18px 18px 0 0;
+  border-bottom: 1.5px solid #22334a;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  box-shadow: none;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tablink {
+  flex: 0 0 auto;
+  background: #233556;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 13px 32px;
+  margin-right: 4px;
+  font-size: 1.1em;
+  border-radius: 11px 11px 0 0;
+  color: #90caf9;
+  font-weight: 600;
+  transition: background 0.23s, color 0.21s;
+}
+.tablink.active, .tablink:hover {
+  background: #1565c0;
+  color: #fff;
+}
+.tab-content {
+  display: none;
+  padding: 28px 32px 30px 32px;
+  background: rgba(34, 51, 74, 0.96);
+  border-radius: 0 0 18px 18px;
+  min-height: 120px;
+  margin: 0;
+  box-shadow: none;
+  max-width: 100%;
+  color: #e6f1ff;
+}
+.tab-content.active {
+  display: block;
+}
+.section-heading {
+  font-size: 1.17em;
+  font-weight: 600;
+  color: #90caf9;
+  background: #102040;
+  padding: 11px 18px;
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  box-shadow: 0 1px 4px #0001;
+  letter-spacing: 0.2px;
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 18px 0 10px 0;
+}
+.gallery-grid img {
+  width: 275px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  border: 2px solid #eee;
+  background: #f9f9fa;
+}
+@media (max-width: 800px) {
+  .profile-container, .main-tabs-card {
+    max-width: 99vw;
+    border-radius: 0;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .profile-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 16px 2vw;
+  }
+  .profile-photo {
+    margin: 18px auto 0 auto;
+  }
+  .profile-info {text-align: center;}
+  .tab-content, .tabs {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+.cv-btn {
+  display: inline-block; margin: 14px 0; padding: 10px 22px;
+  background: #1565c0; color: #fff; border-radius: 24px;
+  font-weight: 500; letter-spacing: .5px; text-decoration: none;
+  box-shadow: 0 2px 6px #0002; transition: background 0.22s;
+}
+.cv-btn:hover { background: #1976d2; }
+.pub-list li {margin-bottom: 8px;}
+.contact-row {margin-bottom:6px;}
   </style>
 </head>
 <body>
